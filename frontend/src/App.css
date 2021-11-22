@@ -1,22 +1,59 @@
-.App {
-  text-align: center;
+.g-custom{
+  --bs-gutter-x: 0rem;
+  --bs-gutter-y: 0rem;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  background: #0B0547;
+  font-family: "Nunito";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.gradient {
+  position: absolute;
+  width: 315px;
+  height: 326.24px;
+  left: -100px;
+  top: 500px;
+  background: #FF8A00;
+  opacity: 0.45;
+  filter: blur(150px);
+  transform: rotate(-80.43deg);
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+.header-video {
+  object-fit: cover;
+}
+
+.header-name {
   color: white;
+  font-family: "Montserrat";
+  padding-left: 15px;
+  margin: 30px 0 30px 0;
 }
 
-.App-link {
-  color: #09d3ac;
+.header-text {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+}
+
+.header-text > span {
+  font-size: 50px;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+}
+
+.line {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 500px;
+  opacity: 100;
+  border: solid 2px white;
 }

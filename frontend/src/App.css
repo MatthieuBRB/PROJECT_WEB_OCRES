@@ -7,15 +7,13 @@ body {
   background: #0B0547;
   font-family: "Nunito";
   color: white;
-  overflow-x: hidden;
-  width: 100%;
 }
 
 .gradient {
   position: absolute;
   width: 315px;
   height: 326.24px;
-  right: -100px;
+  right: 200px;
   top: 700px;
   background: #FF8A00;
   opacity: 0.45;
@@ -93,4 +91,9 @@ body {
   font-size: 20px;
   margin-top: 50px;
   text-align: end;
+}
+
+/* Accordéon */
+.accordion-body, .accordion-button, .accordion-button:not(.collapsed) {
+  background-color: grey;
 }

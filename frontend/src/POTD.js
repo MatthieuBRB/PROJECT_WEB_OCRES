@@ -11,6 +11,7 @@ export default class POTD extends React.Component {
                 var data = response.data;
                 document.getElementsByClassName("potd-title")[0].innerHTML = data.title;
                 document.getElementsByClassName("potd-description")[0].innerHTML = data.explanation;
+                document.getElementsByClassName("potd-date")[0].innerHTML = "- " + data.date;
                 document.getElementById("potd-picture").src = data.url;
             })
             .catch(function (error) {
@@ -21,10 +22,16 @@ export default class POTD extends React.Component {
     render() {
         this.getData();
         return (
-            <div>
-                <div className="potd-title"></div>
-                <div className="potd-description"></div>
-                <img id="potd-picture" src="" alt="potd"></img>
+            <div className="container-fluid p-0">
+                <h3 className="potd-head row g-custom">Image du jour</h3>
+                <div className="row g-custom justify-content-center">
+                    <img className="col-4" id="potd-picture" src="" alt="potd" height="600px"></img>
+                    <div className="col-7 potd-text">
+                        <div className="potd-title"></div>
+                        <div className="potd-description"></div>
+                        <div className="potd-date"></div>
+                    </div>
+                </div>
             </div>
         );
     }

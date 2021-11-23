@@ -7,20 +7,23 @@ body {
   background: #0B0547;
   font-family: "Nunito";
   color: white;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .gradient {
   position: absolute;
   width: 315px;
   height: 326.24px;
-  left: -100px;
-  top: 500px;
+  right: -100px;
+  top: 700px;
   background: #FF8A00;
   opacity: 0.45;
   filter: blur(150px);
   transform: rotate(-80.43deg);
 }
 
+/* Header */
 .logo {
   margin-left: 20px;
 }
@@ -54,4 +57,40 @@ body {
   width: 500px;
   opacity: 100;
   border: solid 2px white;
+}
+
+/* Picture Of The Day */
+.potd-head {
+  margin: 50px 0 30px 25px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#potd-picture {
+  border: 1px white solid;
+  filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.6));
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+
+.potd-text {
+  font-family: 'EB Garamond', serif;
+}
+
+.potd-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.potd-description {
+  font-style: italic;
+  text-align: justify;
+  font-size: 18px;
+}
+
+.potd-date {
+  font-size: 20px;
+  margin-top: 50px;
+  text-align: end;
 }

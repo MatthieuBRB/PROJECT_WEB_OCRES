@@ -10,6 +10,16 @@ export default class API_NASA {
 
     fetchGeomagnetic() {
         return axios
-        .get(`https://api.nasa.gov/DONKI/GST?startDate=default&endDate=default&api_key=${API_KEY}`, {crossdomain: true})
+        .get(`https://api.nasa.gov/DONKI/GST?startDate=default&api_key=${API_KEY}`, {crossdomain: true})
+    }
+
+    fetchShocks() {
+        return axios
+        .get(`https://api.nasa.gov/DONKI/IPS?startDate=default&api_key=${API_KEY}`, {crossdomain: true})
+    }
+
+    fetchSolarFlare() {
+        return axios
+        .get(`https://api.nasa.gov/DONKI/FLR?startDate=default&api_key=${API_KEY}`, {crossdomain: true})
     }
 }

@@ -104,6 +104,7 @@ body {
   margin-bottom: 100px;
   padding: 0;
   border: solid 1px white;
+  box-shadow: 5px 5px 20px black;
 }
 
 .accordion-body, .accordion-item, .accordion-button, .accordion-button:not(.collapsed) {
@@ -111,11 +112,14 @@ body {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(100px);
   font-family: 'Nunito';
+  font-size: 18px;
 }
 
 .accordion-body {
   color: white;
   font-family: 'EB Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
 }
 
 .accordion-line {
@@ -131,4 +135,17 @@ body {
 
 .accordion-button:after {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+/* Personne */
+.person-number {
+  font-size: 170px;
+}
+
+.person-text {
+  font-size: 32px;
 }

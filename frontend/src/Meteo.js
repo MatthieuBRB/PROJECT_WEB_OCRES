@@ -94,10 +94,10 @@ export default class Meteo extends React.Component {
                         <div className="accordion-item">
                             <h2 className="accordion-header" id="headingOne">
                                 <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    TEMPÊTE GÉOMAGNÉTIQUES
+                                    TEMPÊTES GÉOMAGNÉTIQUES
                                 </button>
                             </h2>
-                            <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne">
                                 <div className="accordion-body"></div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@ export default class Meteo extends React.Component {
                                     CHOCS INTERPLANÉTAIRES
                                 </button>
                             </h2>
-                            <div id="collapseTwo" className="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo">
                                 <div className="accordion-body"></div>
                             </div>
                         </div>
@@ -119,7 +119,7 @@ export default class Meteo extends React.Component {
                                     ÉRUPTIONS SOLAIRES
                                 </button>
                             </h2>
-                            <div id="collapseThree" className="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree">
                                 <div className="accordion-body"></div>
                             </div>
                         </div>

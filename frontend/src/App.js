@@ -8,6 +8,7 @@ function App() {
   return (
     <div>
       <Header />
+      <img className="rocket" src="/media/Rocket.png" alt="rocket" width="250px" height="171px"></img>
       <div className="gradient"></div>
       <POTD />
       <Meteo />

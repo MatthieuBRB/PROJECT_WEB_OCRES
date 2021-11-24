@@ -13,12 +13,18 @@ body {
   position: absolute;
   width: 315px;
   height: 326.24px;
-  right: 200px;
-  top: 700px;
+  right: 600px;
+  top: 800px;
   background: #FF8A00;
   opacity: 0.45;
-  filter: blur(150px);
+  filter: blur(170px);
   transform: rotate(-80.43deg);
+}
+
+.rocket {
+  position: absolute;
+  right: 800px;
+  top: 950px;
 }
 
 /* Header */
@@ -57,18 +63,18 @@ body {
   border: solid 2px white;
 }
 
-/* Picture Of The Day */
-.potd-head {
+.section-head {
   margin: 50px 0 30px 25px;
   font-weight: bold;
   font-size: 30px;
 }
 
+/* Picture Of The Day */
 #potd-picture {
   border: 1px white solid;
-  filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.6));
+  box-shadow: 20px 20px 30px #020202;
   margin-right: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .potd-text {
@@ -94,6 +100,12 @@ body {
 }
 
 /* Accordéon */
-.accordion-body, .accordion-button, .accordion-button:not(.collapsed) {
-  background-color: grey;
+.accordion {
+  margin-bottom: 100px;
+  padding: 0;
+  border: solid 1px white;
+}
+
+.accordion-body, .accordion-item, .accordion-button, .accordion-button:not(.collapsed) {
+  background: #0B0547;
 }

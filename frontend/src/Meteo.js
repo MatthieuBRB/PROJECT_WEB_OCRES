@@ -27,7 +27,6 @@ export default class Meteo extends React.Component {
                             str += (data[i].allKpIndex[j].source + " / ");
                         }
                     }
-                            
                     document.getElementsByClassName("accordion-body")[0].innerHTML = str;
                 }
             })
@@ -40,6 +39,7 @@ export default class Meteo extends React.Component {
         this.getData();
         return (
             <div className="container-fluid">
+                <h3 className="section-head row">La météo sur votre planète</h3>
                 <div className="row justify-content-center">
                     <div className="accordion col-8" id="accordionExample">
                         <div className="accordion-item">

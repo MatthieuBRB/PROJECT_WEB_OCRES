@@ -89,11 +89,11 @@ export default class Meteo extends React.Component {
         return (
             <div className="container-fluid">
                 <h3 className="section-head row">La météo dans votre système</h3>
-                <div className="row justify-content-center">
-                    <div className="accordion col-10" id="accordionExample">
+                <div className="row section-body">
+                    <div className="accordion col-8" id="accordionExample">
                         <div className="accordion-item">
                             <h2 className="accordion-header" id="headingOne">
-                                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                     TEMPÊTES GÉOMAGNÉTIQUES
                                 </button>
                             </h2>
@@ -104,7 +104,7 @@ export default class Meteo extends React.Component {
 
                         <div className="accordion-item">
                             <h2 className="accordion-header" id="headingTwo">
-                                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     CHOCS INTERPLANÉTAIRES
                                 </button>
                             </h2>
@@ -115,7 +115,7 @@ export default class Meteo extends React.Component {
 
                         <div className="accordion-item">
                             <h2 className="accordion-header" id="headingThree">
-                                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     ÉRUPTIONS SOLAIRES
                                 </button>
                             </h2>

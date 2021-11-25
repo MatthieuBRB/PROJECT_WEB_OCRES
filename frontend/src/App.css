@@ -23,8 +23,14 @@ body {
 
 .rocket {
   position: absolute;
-  right: 800px;
-  top: 950px;
+  right: 850px;
+  top: 1020px;
+}
+
+.astronaut {
+  position: absolute;
+  right: 370px;
+  top: 1150px;
 }
 
 /* Header */
@@ -69,6 +75,10 @@ body {
   font-size: 30px;
 }
 
+.section-body {
+  margin-left: 25px;
+}
+
 /* Picture Of The Day */
 #potd-picture {
   border: 1px white solid;
@@ -101,7 +111,7 @@ body {
 
 /* Accordéon */
 .accordion {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   padding: 0;
   border: solid 1px white;
   box-shadow: 5px 5px 20px black;
@@ -144,8 +154,30 @@ body {
 /* Personne */
 .person-number {
   font-size: 170px;
+  font-family: 'Outfit', sans-serif;
+  color: rgba(238, 143, 38, 1);
 }
 
 .person-text {
+  font-weight: bold;
   font-size: 32px;
+  color: rgba(238, 143, 38, 1);
+}
+
+#tooltip-button {
+  position: relative;
+  top: -2px;
+  height: 25px;
+  width: 25px;
+  font-size: 15px;
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(150, 150, 150);
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 50%;
+}
+
+#tooltip-button:hover {
+  color: white;
+  border: 1px solid white;
 }

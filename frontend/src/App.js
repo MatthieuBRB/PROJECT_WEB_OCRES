@@ -10,10 +10,9 @@ function App() {
   return (
     <div>
       <Header />
-      <img className="rocket" src="/media/Rocket.png" alt="rocket" width="250px" height="171px"></img>
-      {/*<img className="astronaut" src="/media/Astronaut.png" alt="astronaut" width="450px" height="400px"></img>*/}
+      {/*  <img className="rocket" src="/media/Rocket.png" alt="rocket" width="250px" height="171px"></img>
       <div className="gradient"></div>
-      {/* <POTD />
+      <POTD />
       <Weather />
       <Person /> */}
       <BuySection />
@@ -22,3 +21,5 @@ function App() {
 }
 
 export default App;
+
+// <img className="astronaut" src="/media/Astronaut.png" alt="astronaut" width="450px" height="400px"></img>

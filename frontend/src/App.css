@@ -181,3 +181,8 @@ body {
   color: white;
   border: 1px solid white;
 }
+
+/* Planètes */
+.planet-row {
+  margin-top: 30px;
+}

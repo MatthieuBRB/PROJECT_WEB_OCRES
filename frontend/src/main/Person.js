@@ -1,5 +1,5 @@
 import React from 'react';
-import API_PERSON from './API_PERSON.js';
+import API_PERSON from './api/API_PERSON';
 
 const apiPerson = new API_PERSON();
 

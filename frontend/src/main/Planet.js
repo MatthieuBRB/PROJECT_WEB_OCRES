@@ -1,5 +1,5 @@
 import React from 'react';
-import API_PICTURES from './API_PICTURES.js';
+import API_PICTURES from './api/API_PICTURES.js';
 
 const apiPictures = new API_PICTURES();
 const idList = {

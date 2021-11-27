@@ -1,5 +1,5 @@
 import React from 'react';
-import API_NASA from './API_NASA.js';
+import API_NASA from './api/API_NASA.js';
 
 const apiNasa = new API_NASA();
 

@@ -5,7 +5,8 @@ export default class BuySection extends React.Component {
     render() {
         return (
             <div id="planets-list" className="container-fluid">
-                <div className="row justify-content-around planet-row">
+                <h3 className="section-head row">Achetez votre terrain</h3>
+                <div className="row justify-content-center planet-row">
                     <Planet
                         choice={0}
                     />
@@ -16,7 +17,7 @@ export default class BuySection extends React.Component {
                         choice={2}
                     />
                 </div>
-                <div className="row justify-content-around planet-row">
+                <div className="row justify-content-center planet-row">
                     <Planet
                         choice={3}
                     />

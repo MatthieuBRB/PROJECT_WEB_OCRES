@@ -36,10 +36,14 @@ export default class Planet extends React.Component {
     render() {
         this.getData();
         return (
-            <div className="col-auto">
+            <div className="planet-item col-auto">
                 <div className="planet-picture"></div>
-                <div className="planet-name"></div>
-                <div className="planet-price"></div>
+                <div className="container-fluid p-0">
+                    <div className="row justify-content-between">
+                        <div className="planet-name col-auto"></div>
+                        <div className="planet-price col-auto"></div>
+                    </div>
+                </div>
             </div>
         );
     }

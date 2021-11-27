@@ -23,7 +23,7 @@ export default class POTD extends React.Component {
         this.getData();
         return (
             <div className="container-fluid p-0">
-                <h3 className="section-head row g-custom">Image du jour</h3>
+                <h3 className="section-head-first row g-custom">Image du jour</h3>
                 <div className="row g-custom justify-content-center">
                     <img className="col-4" id="potd-picture" src="" alt="potd" height="600px"></img>
                     <div className="col-7 potd-text">

@@ -13,12 +13,17 @@ body {
   position: absolute;
   width: 315px;
   height: 326.24px;
-  right: 500px;
+  right: 250px;
   top: 300px;
   background: #FF8A00;
   opacity: 0.45;
   filter: blur(170px);
   transform: rotate(-80.43deg);
+}
+
+.lower {
+  top: 1620px;
+  left: 1px;
 }
 
 .rocket {
@@ -30,7 +35,7 @@ body {
 .rocket2 {
   position: absolute;
   right: 50px;
-  top: 1730px;
+  top: 1760px;
 }
 
 /* Logo + Name */
@@ -131,7 +136,27 @@ main {
   text-align: end;
 }
 
-/* Accordéon */
+/* Météo + Accordéon */
+.weather-research {
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.weather-research-date {
+  width: 165px;
+  border: solid 3px #EFC862;
+  border-radius: 10px;
+}
+
+.weather-research-button {
+  width: 150px;
+  margin-left: 30px;
+  border: 3px solid white;
+  color: white;
+  background-color: #EFC862;
+  border-radius: 10px;
+}
+
 .accordion {
   margin-bottom: 50px;
   padding: 0;

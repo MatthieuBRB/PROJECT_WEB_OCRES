@@ -8,18 +8,18 @@ export default class API_NASA {
         .get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`, {crossdomain: true})
     }
 
-    fetchGeomagnetic() {
+    fetchGeomagnetic(date, date2) {
         return axios
-        .get(`https://api.nasa.gov/DONKI/GST?startDate=default&api_key=${API_KEY}`, {crossdomain: true})
+        .get(`https://api.nasa.gov/DONKI/GST?startDate=${date}&endDate=${date2}&api_key=${API_KEY}`, {crossdomain: true})
     }
 
-    fetchShocks() {
+    fetchShocks(date, date2) {
         return axios
-        .get(`https://api.nasa.gov/DONKI/IPS?startDate=default&api_key=${API_KEY}`, {crossdomain: true})
+        .get(`https://api.nasa.gov/DONKI/IPS?startDate=${date}&endDate=${date2}&api_key=${API_KEY}`, {crossdomain: true})
     }
 
-    fetchSolarFlare() {
+    fetchSolarFlare(date, date2) {
         return axios
-        .get(`https://api.nasa.gov/DONKI/FLR?startDate=default&api_key=${API_KEY}`, {crossdomain: true})
+        .get(`https://api.nasa.gov/DONKI/FLR?startDate=${date}&endDate=${date2}&api_key=${API_KEY}`, {crossdomain: true})
     }
 }

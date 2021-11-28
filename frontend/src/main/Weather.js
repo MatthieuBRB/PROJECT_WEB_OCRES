@@ -4,9 +4,17 @@ import API_NASA from './api/API_NASA.js';
 const apiNasa = new API_NASA();
 
 export default class Meteo extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { date: "default", date2: "default" };
+    }
+
     getData() {
+        var date = this.state.date;
+        var date2 = this.state.date2;
+
         apiNasa
-            .fetchGeomagnetic()
+            .fetchGeomagnetic(date, date2)
             .then(function (response) {
                 var data = response.data;
                 if (data === '') {
@@ -35,7 +43,7 @@ export default class Meteo extends React.Component {
             });
 
         apiNasa
-            .fetchShocks()
+            .fetchShocks(date, date2)
             .then(function (response) {
                 var data = response.data;
                 if (data === '') {
@@ -58,7 +66,7 @@ export default class Meteo extends React.Component {
             });
 
         apiNasa
-            .fetchSolarFlare()
+            .fetchSolarFlare(date, date2)
             .then(function (response) {
                 var data = response.data;
                 if (data === '') {
@@ -89,6 +97,13 @@ export default class Meteo extends React.Component {
         return (
             <div className="container-fluid">
                 <h3 className="section-head row">La météo dans votre système</h3>
+                <div className="row weather-research">
+                    <label className="col-auto" htmlFor="weatherDate">Rechercher la météo entre</label>
+                    <input type="date" className="weather-research-date col-auto" name="weatherDate" required></input>
+                    <label className="col-auto" htmlFor="weatherDate">et</label>
+                    <input type="date" className="weather-research-date col-auto" name="weatherDate" required></input>
+                    <button className="weather-research-button" onClick={() => this.changeDate()}>Rechercher</button>
+                </div>
                 <div className="row section-body">
                     <div className="accordion col-8" id="accordionExample">
                         <div className="accordion-item">
@@ -127,5 +142,13 @@ export default class Meteo extends React.Component {
                 </div>
             </div>
         );
+    }
+
+    changeDate() {
+        var value = document.getElementsByClassName("weather-research-date")[0].value;
+        this.setState({ date: value });
+        var value2 = document.getElementsByClassName("weather-research-date")[1].value;
+        this.setState({ date2: value2 });
+        this.getData();
     }
 }

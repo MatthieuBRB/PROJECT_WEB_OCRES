@@ -2,8 +2,10 @@ import React from 'react';
 import './App.css';
 import Header from './Header.js';
 import POTD from './POTD.js';
-//import Meteo from './Meteo.js';
+import Meteo from './Meteo.js';
 import Person from './Person.js';
+import SpaceX from './SpaceX.js';
+
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
       <img className="rocket" src="/media/Rocket.png" alt="rocket" width="250px" height="171px"></img>
       <div className="gradient"></div>
       <POTD />
-      {/*<Meteo />*/}
+
+      <SpaceX/>
+      {<Meteo />}
       <Person />
     </div>
   );

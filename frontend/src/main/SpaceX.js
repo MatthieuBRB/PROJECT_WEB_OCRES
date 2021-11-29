@@ -29,7 +29,6 @@ export default class SpaceX extends React.Component {
         apispacex
             .fetchLaunches()
             .then(res => {
-                console.log(res.data);
                 var rawData = res.data;
                 var dataSet = [];
                 var dataSetYear = [];
@@ -74,7 +73,6 @@ export default class SpaceX extends React.Component {
    
 
     render() {
-        console.log(this.state.dataSet);
         return (
             <div className="container">
                 <h2 className="row justify-content-center">Graphique des lancements SpaceX</h2>

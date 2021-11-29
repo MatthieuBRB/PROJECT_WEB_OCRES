@@ -4,15 +4,25 @@ import API_NASA from './api/API_NASA.js';
 const apiNasa = new API_NASA();
 
 export default class POTD extends React.Component {
-    getData() {
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: "",
+            explanation: "",
+            date: "",
+            url: ""
+        };
+    }
+
+    componentDidMount() {
         apiNasa
             .fetchPictureOfTheDay()
-            .then(function (response) {
-                var data = response.data;
-                document.getElementsByClassName("potd-title")[0].innerHTML = data.title;
-                document.getElementsByClassName("potd-description")[0].innerHTML = data.explanation;
-                document.getElementsByClassName("potd-date")[0].innerHTML = "- " + data.date;
-                document.getElementById("potd-picture").src = data.url;
+            .then(res => {
+                const data = res.data;
+                this.setState({ title: data.title });
+                this.setState({ explanation: data.explanation });
+                this.setState({ date: data.date });
+                this.setState({ url: data.url });
             })
             .catch(function (error) {
                 console.error(error);
@@ -20,16 +30,15 @@ export default class POTD extends React.Component {
     }
 
     render() {
-        this.getData();
         return (
             <div className="container-fluid p-0">
                 <h3 className="section-head-first row g-custom">Image du jour</h3>
                 <div className="row g-custom justify-content-center">
-                    <img className="col-4" id="potd-picture" src="" alt="potd" height="600px"></img>
+                    <img className="col-4" id="potd-picture" src={this.state.url} alt="potd" height="600px"></img>
                     <div className="col-7 potd-text">
-                        <div className="potd-title"></div>
-                        <div className="potd-description"></div>
-                        <div className="potd-date"></div>
+                        <div className="potd-title">{this.state.title}</div>
+                        <div className="potd-description">{this.state.explanation}</div>
+                        <div className="potd-date">{this.state.date}</div>
                     </div>
                 </div>
             </div>

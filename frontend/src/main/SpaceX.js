@@ -4,10 +4,7 @@ import { CartesianGrid, BarChart, XAxis, YAxis, Bar, Legend, Tooltip } from 'rec
 
 const apispacex = new API_SPACEX();
 
-
-
 export default class SpaceX extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -74,9 +71,9 @@ export default class SpaceX extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <h2 className="row justify-content-center">Graphique des lancements SpaceX</h2>
-                <div>
+            <div className="container-fluid">
+                <h2 className="row section-head">Graphique des lancements SpaceX</h2>
+                <div className="row">
                     <BarChart width={1300} height={300} data={this.state.dataSet} margin={{ top: 2, right: 5 }}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="launch_year" />

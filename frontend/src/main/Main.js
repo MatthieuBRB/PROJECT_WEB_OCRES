@@ -4,6 +4,7 @@ import POTD from './POTD.js';
 import Weather from './Weather.js';
 import Person from './Person.js';
 import BuySection from './BuySection.js';
+import SpaceX from './SpaceX.js';
 
 export default class Main extends React.Component {
     render() {
@@ -15,8 +16,11 @@ export default class Main extends React.Component {
                 <div className="gradient lower"></div>
                 <POTD />
                 <BuySection />
+                
                 <Person />
+                
                 <Weather />
+                <SpaceX/>
             </main>
         );
     }

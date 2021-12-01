@@ -16,9 +16,7 @@ export default class Main extends React.Component {
                 <div className="gradient lower"></div>
                 <POTD />
                 <BuySection />
-                
                 <Person />
-                
                 <Weather />
                 <SpaceX/>
             </main>

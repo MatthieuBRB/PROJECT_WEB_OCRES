@@ -3,6 +3,14 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
+const mongoose = require('mongoose');
+
+mongoose.Promise = global.Promise;
+const dbName = "";
+const dbURL = `mongodb://localhost:27017/${dbName}`;
+
+mongoose.connect(dbURL, {useNewUrlParser: true});
+
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 

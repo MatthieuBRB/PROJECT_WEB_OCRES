@@ -5,6 +5,7 @@ import Weather from './Weather.js';
 import Person from './Person.js';
 import BuySection from './BuySection.js';
 import SpaceX from './SpaceX.js';
+import Locations from './Locations.js';
 
 export default class Main extends React.Component {
     render() {
@@ -19,6 +20,7 @@ export default class Main extends React.Component {
                 <Person />
                 <Weather />
                 <SpaceX/>
+                <Locations />
             </main>
         );
     }

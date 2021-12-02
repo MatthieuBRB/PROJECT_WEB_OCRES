@@ -1,5 +1,6 @@
 var express = require("express");
 const mongoose = require("mongoose")
+var cors = require('cors');
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
@@ -9,6 +10,8 @@ var usersRouter = require("./routes/users");
 var locationsRouter = require("./routes/locations.routes");
 
 var app = express();
+
+app.use(cors());
 
 mongoose.connect("mongodb://localhost:27017/StarWarsLocations", {
   useNewUrlParser: "true",

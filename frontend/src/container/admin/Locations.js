@@ -1,5 +1,5 @@
 import React from "react";
-import API_LOCATIONS from "./api/API_LOCATIONS";
+import API_LOCATIONS from "./API_LOCATIONS";
 
 const apiLocations = new API_LOCATIONS();
 

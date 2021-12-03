@@ -1,14 +1,22 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import Routes from './Routes';
 import './App.css'; 
 
-import Header from './header/Header.js';
-import Main from './main/Main.js';
+// import Main from './container/main/Main';
 
 function App() {
   return (
     <div>
-      <Header />
-      <Main />
+      <header>
+        <nav>
+          <ol>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/admin">Admin</Link></li>
+          </ol>
+        </nav>
+        <Routes />
+      </header>
     </div>
   );
 }

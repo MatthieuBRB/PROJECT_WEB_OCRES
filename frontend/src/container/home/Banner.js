@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Header extends React.Component {
+export default class Banner extends React.Component {
     render() {
         return (
             <header className="container-fluid p-0">

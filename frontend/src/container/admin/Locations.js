@@ -7,7 +7,7 @@ export default class Locations extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: ""
+            tableContent: ""
         };
     }
 
@@ -16,13 +16,25 @@ export default class Locations extends React.Component {
             .fetchLocationsStarWars()
             .then(res => {
                 const data = res.data;
-                this.setState({ name: data[0].name });
+                var temp = "<table>";
+                temp += "<tr><td>Nom</td><td>Film</td><td>Pays</td><td>Type</td><td>Équivalent dans la fiction</td></tr>";
+                for (var i = 0; i < data.length; i++) {
+                    temp += "<tr><td>";
+                    temp += data[i].name + "</td><td>";
+                    temp += data[i].movie + "</td><td>";
+                    temp += data[i].country + "</td><td>";
+                    temp += data[i].type + "</td><td>";
+                    temp += data[i].fiction;
+                    temp += "</td></tr>";
+                }
+                temp += "</table>";
+                this.setState({ tableContent: temp });
             })
     }
     
     render() {
         return (
-            <div className="locations">{this.state.name}</div>
+            <div dangerouslySetInnerHTML={{ __html: this.state.tableContent }}></div>
         );
     }
 }

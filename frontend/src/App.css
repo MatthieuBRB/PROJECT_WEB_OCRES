@@ -53,6 +53,32 @@ body {
 
 /* Header */
 header {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto;
+}
+
+nav {
+  justify-self: center;
+  align-self: center;
+}
+
+nav > span:nth-child(2) {
+  margin-left: 60px;
+}
+
+nav > span > a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav > span > a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Banner */
+.banner {
   position: sticky;
   top: 0;
   z-index: 1;
@@ -65,17 +91,17 @@ main {
   padding-top: 1px;
 }
 
-.header-video {
+.banner-video {
   object-fit: cover;
 }
 
-.header-text {
+.banner-text {
   font-size: 50px;
   font-weight: bold;
   position: absolute;
 }
 
-.header-text > span {
+.banner-text > span {
   font-size: 50px;
   font-weight: normal;
   position: absolute;

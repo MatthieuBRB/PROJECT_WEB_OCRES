@@ -1,26 +1,25 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Routes from './Routes';
-import './App.css'; 
-
-// import Main from './container/main/Main';
+import './App.css';
+import logo from './media/Logo.png';
 
 function App() {
   return (
     <div>
       <header>
+        <div className="title">
+          <img className="logo" src={logo} alt="logo" width="48px" height="48px"></img>
+          <h1 className="name">ExoProperty</h1>
+        </div>
         <nav>
-          <ol>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/admin">Admin</Link></li>
-          </ol>
+          <span><Link to="/">Home</Link></span>
+          <span><Link to="/admin">Admin</Link></span>
         </nav>
-        <Routes />
       </header>
+      <Routes />
     </div>
   );
 }
 
 export default App;
-
-// <img className="astronaut" src="/media/Astronaut.png" alt="astronaut" width="450px" height="400px"></img>

@@ -15,9 +15,10 @@ app.use(express.static(path.join(__dirname, '../frontend/build')))
 
 app.use(cors());
 
-const url = "mongodb+srv://dbUser:dbUserPassword@cluster0.xdj4q.mongodb.net/StarWarsLocations?retryWrites=true&w=majority"
+//const url = "mongodb+srv://dbUser:dbUserPassword@cluster0.xdj4q.mongodb.net/StarWarsLocations?retryWrites=true&w=majority";
+const local = "mongodb://localhost:27017/StarWarsLocations";
 
-mongoose.connect(url, {
+mongoose.connect(local, {
   useNewUrlParser: "true",
 })
 mongoose.connection.on("error", err => {
@@ -35,11 +36,5 @@ app.use(cookieParser());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/locations", locationsRouter);
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/../frontend/build/index.html'))
-})
-
-app.listen(process.env.PORT || 3000);
 
 module.exports = app;

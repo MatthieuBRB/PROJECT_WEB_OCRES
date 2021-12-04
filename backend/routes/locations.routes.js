@@ -7,6 +7,8 @@ router.get('/:name', Location.findByName);
 
 router.post('/', Location.saveOne);
 
+router.put('/:name', Location.updateByName);
+
 router.delete('/:name', Location.deleteByName);
 
 module.exports = router;

@@ -16,8 +16,8 @@ export default class Locations extends React.Component {
             .fetchLocationsStarWars()
             .then(res => {
                 const data = res.data;
-                var temp = "<table>";
-                temp += "<tr><td>Nom</td><td>Film</td><td>Pays</td><td>Type</td><td>Équivalent dans la fiction</td></tr>";
+                var temp = "<table class='content-table'>";
+                temp += "<thead><tr><td>Nom</td><td>Film</td><td>Pays</td><td>Type</td><td>Équivalent dans la fiction</td></tr></thead><tbody>";
                 for (var i = 0; i < data.length; i++) {
                     temp += "<tr><td>";
                     temp += data[i].name + "</td><td>";
@@ -27,7 +27,7 @@ export default class Locations extends React.Component {
                     temp += data[i].fiction;
                     temp += "</td></tr>";
                 }
-                temp += "</table>";
+                temp += "</tbody></table>";
                 this.setState({ tableContent: temp });
             })
     }

@@ -20,8 +20,6 @@ export default class SpaceX extends React.Component {
         );
     }
 
-
-
     componentDidMount() {
         apispacex
             .fetchLaunches()
@@ -67,14 +65,13 @@ export default class SpaceX extends React.Component {
             });
     }
 
-   
 
     render() {
         return (
             <div className="container-fluid">
                 <h2 className="row section-head">Graphique des lancements SpaceX</h2>
                 <div className="row">
-                    <BarChart width={1300} height={300} data={this.state.dataSet} margin={{ top: 2, right: 5 }}>
+                    <BarChart width={1125} height={300} data={this.state.dataSet} margin={{ top: 2, right: 5 }}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="launch_year" />
                         <YAxis />
@@ -82,7 +79,6 @@ export default class SpaceX extends React.Component {
                         <Tooltip />
                         <Bar dataKey="Lancement_réussi" type="monotone" fill="#2dfc03" />
                         <Bar dataKey="Lancement_échoué" type="monotone" fill=" #fc0303" />
-
                     </BarChart>
                 </div>
 

@@ -287,13 +287,14 @@ main {
 /** Lieux **/
 .content-table {
   border-collapse: collapse;
-  margin: 25px 0 0 15px;
+  margin: 25px 15px 20px 15px;
   font-size: 0.9em;
   min-width: 400px;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   color: black;
+  width: 90%;
 }
 
 .content-table thead tr {
@@ -321,4 +322,21 @@ main {
 
 .content-table tbody tr:last-of-type {
   border-bottom: 3px solid #EFC862;
+}
+
+.input-section {
+  margin: 50px 15px 0 15px;
+}
+
+.input-section > button {
+  border: 3px solid white;
+  color: white;
+  background-color: #EFC862;
+  border-radius: 10px;
+}
+
+.input-section > input {
+  margin-right: 32px;
+  border: solid 3px #EFC862;
+  border-radius: 10px;
 }

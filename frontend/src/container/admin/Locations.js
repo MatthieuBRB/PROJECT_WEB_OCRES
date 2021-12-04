@@ -38,7 +38,10 @@ export default class Locations extends React.Component {
 
     callDelete() {
         var name = this.state.deleteValue;
-        apiLocations.deleteLocationStarWars(name);
+        if (window.confirm(`Êtes-vous sûr de vouloir supprimer ${name} ?`)) {
+            apiLocations.deleteLocationStarWars(name);
+            window.location.reload(false);
+        }
     }
 
     callCreate() {
@@ -50,6 +53,7 @@ export default class Locations extends React.Component {
             fiction: this.state.fictionValue
         };
         apiLocations.createLocationStarWars(location);
+        window.location.reload(false);
     }
 
     handleChange(choice, event) {
@@ -79,19 +83,19 @@ export default class Locations extends React.Component {
 
     render() {
         return (
-            <div>
-                <div dangerouslySetInnerHTML={{ __html: this.state.tableContent }}></div>
-                <div>
-                    <input type="text" value={this.state.deleteValue} placeholder="Entrer le nom du lieu à supprimer" required onChange={(e) => this.handleChange("delete", e)} />
-                    <button type="button" onClick={() => this.callDelete()}>Supprimer</button>
+            <div className="container-fluid">
+                <div dangerouslySetInnerHTML={{ __html: this.state.tableContent }} className="row justify-content-center"></div>
+                <div className="row input-section">
+                    <input type="text" className="col-2" value={this.state.deleteValue} placeholder="Nom du lieu à supprimer" required onChange={(e) => this.handleChange("delete", e)} />
+                    <button type="button" className="col-auto" onClick={() => this.callDelete()}>Supprimer</button>
                 </div>
-                <div>
-                    <input type="text" value={this.state.nameValue} placeholder="Nom" required onChange={(e) => this.handleChange("nom", e)} />
-                    <input type="text" value={this.state.movieValue} placeholder="Film" required onChange={(e) => this.handleChange("film", e)} />
-                    <input type="text" value={this.state.countryValue} placeholder="Pays" required onChange={(e) => this.handleChange("pays", e)} />
-                    <input type="text" value={this.state.typeValue} placeholder="Type" required onChange={(e) => this.handleChange("type", e)} />
-                    <input type="text" value={this.state.fictionValue} placeholder="Équivalent fictif" required onChange={(e) => this.handleChange("fiction", e)} />
-                    <button type="button" onClick={() => this.callCreate()}>Ajouter</button>
+                <div className="row input-section">
+                    <input type="text" className="col-2" value={this.state.nameValue} placeholder="Nom" required onChange={(e) => this.handleChange("nom", e)} />
+                    <input type="text" className="col-2" value={this.state.movieValue} placeholder="Film" required onChange={(e) => this.handleChange("film", e)} />
+                    <input type="text" className="col-2" value={this.state.countryValue} placeholder="Pays" required onChange={(e) => this.handleChange("pays", e)} />
+                    <input type="text" className="col-2" value={this.state.typeValue} placeholder="Type" required onChange={(e) => this.handleChange("type", e)} />
+                    <input type="text" className="col-2" value={this.state.fictionValue} placeholder="Équivalent fictif" required onChange={(e) => this.handleChange("fiction", e)} />
+                    <button type="button" className="col-auto" onClick={() => this.callCreate()}>Ajouter</button>
                 </div>
             </div>
         );

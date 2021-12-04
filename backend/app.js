@@ -11,6 +11,8 @@ var locationsRouter = require("./routes/locations.routes");
 
 var app = express();
 
+app.use(express.static(path.join(__dirname, '../frontend/build')))
+
 app.use(cors());
 
 mongoose.connect("mongodb://localhost:27017/StarWarsLocations", {
@@ -31,5 +33,9 @@ app.use(cookieParser());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/locations", locationsRouter);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/../frontend/build/index.html'))
+})
 
 module.exports = app;

@@ -7,8 +7,12 @@ export default class Locations extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tableContent: ""
+            tableContent: "",
+            deleteValue: "",
+            nameValue: "", movieValue: "", countryValue: "", typeValue: "", fictionValue: ""
         };
+
+        this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount() {
@@ -17,7 +21,7 @@ export default class Locations extends React.Component {
             .then(res => {
                 const data = res.data;
                 var temp = "<table class='content-table'>";
-                temp += "<thead><tr><td>Nom</td><td>Film</td><td>Pays</td><td>Type</td><td>Équivalent dans la fiction</td></tr></thead><tbody>";
+                temp += "<thead><tr><td>Nom</td><td>Film</td><td>Pays</td><td>Type</td><td>Équivalent fictif</td></tr></thead><tbody>";
                 for (var i = 0; i < data.length; i++) {
                     temp += "<tr><td>";
                     temp += data[i].name + "</td><td>";
@@ -31,10 +35,65 @@ export default class Locations extends React.Component {
                 this.setState({ tableContent: temp });
             })
     }
-    
+
+    callDelete() {
+        var name = this.state.deleteValue;
+        apiLocations.deleteLocationStarWars(name);
+    }
+
+    callCreate() {
+        const location = {
+            name: this.state.nameValue,
+            movie: this.state.movieValue,
+            country: this.state.countryValue,
+            type: this.state.typeValue,
+            fiction: this.state.fictionValue
+        };
+        apiLocations.createLocationStarWars(location);
+    }
+
+    handleChange(choice, event) {
+        switch (choice) {
+            case 'delete':
+                this.setState({ deleteValue: event.target.value });
+                break;
+            case 'nom':
+                this.setState({ nameValue: event.target.value });
+                break;
+            case 'film':
+                this.setState({ movieValue: event.target.value });
+                break;
+            case 'pays':
+                this.setState({ countryValue: event.target.value });
+                break;
+            case 'type':
+                this.setState({ typeValue: event.target.value });
+                break;
+            case 'fiction':
+                this.setState({ fictionValue: event.target.value });
+                break;
+            default:
+                break;
+        }
+    }
+
     render() {
         return (
-            <div dangerouslySetInnerHTML={{ __html: this.state.tableContent }}></div>
+            <div>
+                <div dangerouslySetInnerHTML={{ __html: this.state.tableContent }}></div>
+                <div>
+                    <input type="text" value={this.state.deleteValue} placeholder="Entrer le nom du lieu à supprimer" required onChange={(e) => this.handleChange("delete", e)} />
+                    <button type="button" onClick={() => this.callDelete()}>Supprimer</button>
+                </div>
+                <div>
+                    <input type="text" value={this.state.nameValue} placeholder="Nom" required onChange={(e) => this.handleChange("nom", e)} />
+                    <input type="text" value={this.state.movieValue} placeholder="Film" required onChange={(e) => this.handleChange("film", e)} />
+                    <input type="text" value={this.state.countryValue} placeholder="Pays" required onChange={(e) => this.handleChange("pays", e)} />
+                    <input type="text" value={this.state.typeValue} placeholder="Type" required onChange={(e) => this.handleChange("type", e)} />
+                    <input type="text" value={this.state.fictionValue} placeholder="Équivalent fictif" required onChange={(e) => this.handleChange("fiction", e)} />
+                    <button type="button" onClick={() => this.callCreate()}>Ajouter</button>
+                </div>
+            </div>
         );
     }
 }

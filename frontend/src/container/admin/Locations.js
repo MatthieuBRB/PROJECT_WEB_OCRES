@@ -9,7 +9,8 @@ export default class Locations extends React.Component {
         this.state = {
             tableContent: "",
             deleteValue: "",
-            nameValue: "", movieValue: "", countryValue: "", typeValue: "", fictionValue: ""
+            nameValue: "", movieValue: "", countryValue: "", typeValue: "", fictionValue: "",
+            successValue: ""
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -52,8 +53,20 @@ export default class Locations extends React.Component {
             type: this.state.typeValue,
             fiction: this.state.fictionValue
         };
-        apiLocations.createLocationStarWars(location);
-        window.location.reload(false);
+        apiLocations
+            .createLocationStarWars(location)
+            .then(res => {
+                const data = res.data;
+                if (data !== '') {
+                    this.setState({ successValue: "Réussi" })
+                    setTimeout(function () {
+                        window.location.reload(false);
+                    }, 2000);
+                } else {
+                    alert("Échec lors de l'insertion");
+                }
+            })
+
     }
 
     handleChange(choice, event) {
@@ -97,6 +110,7 @@ export default class Locations extends React.Component {
                     <input type="text" className="col-2" value={this.state.fictionValue} placeholder="Équivalent fictif" required onChange={(e) => this.handleChange("fiction", e)} />
                     <button type="button" className="col-auto" onClick={() => this.callCreate()}>Ajouter</button>
                 </div>
+                <div className="row justify-content-end success">{this.state.successValue}</div>
             </div>
         );
     }

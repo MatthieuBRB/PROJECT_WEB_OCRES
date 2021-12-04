@@ -340,3 +340,9 @@ main {
   border: solid 3px #EFC862;
   border-radius: 10px;
 }
+
+.success {
+  margin-top: 10px;
+  margin-right: 2.3%;
+  color: lime;
+}

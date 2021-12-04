@@ -11,6 +11,7 @@ export default class API_LOCATIONS {
     }
 
     createLocationStarWars(location) {
-        axios.post("http://localhost:3000/locations", location, {crossdomain: true})
+        return axios
+        .post("http://localhost:3000/locations", location, {crossdomain: true})
     }
 }

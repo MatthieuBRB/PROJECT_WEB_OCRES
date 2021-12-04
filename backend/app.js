@@ -15,7 +15,9 @@ app.use(express.static(path.join(__dirname, '../frontend/build')))
 
 app.use(cors());
 
-mongoose.connect("mongodb://localhost:27017/StarWarsLocations", {
+const url = "mongodb+srv://dbUser:dbUserPassword@cluster0.xdj4q.mongodb.net/StarWarsLocations?retryWrites=true&w=majority"
+
+mongoose.connect(url, {
   useNewUrlParser: "true",
 })
 mongoose.connection.on("error", err => {

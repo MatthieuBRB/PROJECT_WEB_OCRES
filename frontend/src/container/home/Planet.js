@@ -41,7 +41,7 @@ export default class Planet extends React.Component {
         return (
             <div className="planet-item col-auto">
                 <div className="planet-picture">
-                    <img src={this.state.url} alt="planet" width="350px" height="350px"></img>
+                    <img src={this.state.url} alt="planet"></img>
                 </div>
                 <div className="container-fluid p-0">
                     <div className="row justify-content-between">

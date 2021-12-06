@@ -63,6 +63,18 @@ nav {
   align-self: center;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+
+  nav {
+    justify-self: start;
+    margin-left: 20px;
+  }
+}
+
 nav > span:nth-child(2) {
   margin-left: 60px;
 }
@@ -119,13 +131,13 @@ main {
 .section-head-first {
   margin: 20px 0 30px 25px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2vw;
 }
 
 .section-head {
   margin: 50px 0 30px 25px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2vw;
 }
 
 .section-body {
@@ -138,6 +150,8 @@ main {
   box-shadow: 20px 20px 30px #020202;
   margin-right: 50px;
   margin-bottom: 20px;
+  height: auto;
+  max-height: 600px;
 }
 
 .potd-text {
@@ -145,7 +159,7 @@ main {
 }
 
 .potd-title {
-  font-size: 25px;
+  font-size: 1.6vw;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -153,11 +167,11 @@ main {
 .potd-description {
   font-style: italic;
   text-align: justify;
-  font-size: 18px;
+  font-size: 1.2vw;
 }
 
 .potd-date {
-  font-size: 20px;
+  font-size: 1.6vw;
   margin-top: 50px;
   text-align: end;
 }
@@ -166,6 +180,7 @@ main {
 .weather-research {
   margin-left: 15px;
   margin-bottom: 20px;
+  font-size: 1vw;
 }
 
 .weather-research-date {
@@ -195,13 +210,13 @@ main {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(100px);
   font-family: 'Nunito';
-  font-size: 18px;
+  font-size: 1.2vw;
 }
 
 .accordion-body {
   color: white;
   font-family: 'EB Garamond', serif;
-  font-size: 17px;
+  font-size: 1.1vw;
   font-style: italic;
 }
 
@@ -226,14 +241,14 @@ main {
 
 /* Personne */
 .person-number {
-  font-size: 170px;
+  font-size: 11.2vw;
   font-family: 'Outfit', sans-serif;
   color: #EFC862;
 }
 
 .person-text {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 2vw;
   color: #EFC862;
 }
 
@@ -274,14 +289,23 @@ main {
 
 .planet-name {
   font-weight: bold;
+  font-size: 1vw;
 }
 
 .planet-price {
   font-style: italic;
+  font-size: 1vw;
 }
 
 .planet-picture {
   border: solid 1px rgba(255, 255, 255, 0.644);
+}
+
+.planet-picture > img {
+  width: 22vw;
+  max-width: 350px;
+  height: 22vw;
+  max-height: 350px;
 }
 
 /** Lieux **/

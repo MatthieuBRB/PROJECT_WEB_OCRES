@@ -37,7 +37,7 @@ export default class Person extends React.Component {
                     <span className="person-number col-auto">{this.state.number}</span>
                     <div className="person-text col-2">
                         <span>personnes ont déjà déménagé dans l'espace</span>
-                        <button id="tooltip-button" title={this.state.names} disabled><span role="img" aria-label="fusée">ℹ️</span></button>
+                        <button id="tooltip-button" className="d-none d-xxl-inline-block" title={this.state.names} disabled><span role="img" aria-label="fusée">ℹ️</span></button>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,7 @@ export default class Meteo extends React.Component {
         };
     }
 
-    componentDidMount() {
+    getData() {
         apiNasa
             .fetchGeomagnetic(this.state.date, this.state.date2)
             .then(res => {
@@ -101,6 +101,10 @@ export default class Meteo extends React.Component {
             .catch(function (error) {
                 console.error(error);
             });
+    }
+
+    componentDidMount() {
+        this.getData();
     }
 
     /*getData() {

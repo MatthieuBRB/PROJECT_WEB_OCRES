@@ -17,8 +17,8 @@ export default class Home extends React.Component {
             <div>
                 <Banner />
                 <main>
-                    <img className="rocket" src={rocket} alt="rocket" width="250px" height="171px"></img>
-                    <img className="rocket2" src={rocket2} alt="rocket2" width="370px" height="569px"></img>
+                    <img className="rocket d-none d-xxl-block" src={rocket} alt="rocket" width="250px" height="171px"></img>
+                    <img className="rocket2 d-none d-xxl-block" src={rocket2} alt="rocket2" width="370px" height="569px"></img>
                     <div className="gradient"></div>
                     <div className="gradient lower"></div>
                     <POTD />

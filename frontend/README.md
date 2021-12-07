@@ -1,13 +1,68 @@
-# Frontend
+# Comment lancer le projet ExoProperty ?
 
-Ce dossier contiendra la partie frontend de votre projet.
+## Si le fichier package.json n'est pas présent
 
-Le frontend à été initalisé avec un create-react-app et sotrybook y est deja installé avec un exemple de stories que vous trouverez dans le repertoire `src/stories`.
+Vérifier que l'on est bien dans le dossier `frontend`.
+```sh
+cd frontend
+```
 
-Storybook est là pour vous aider à prototyper et documenter vos composants. Si nous n'arrivons pas à lancer votre projet, nous pourrons au moins regarder vos composants en fonctionnement.
+### Installer React
 
-## Documentation
+Si le dossier `node-modules` n'est pas présent, installer React dans le projet.
+```sh
+npm install
+```
 
-Vous pourrez supprimer le contenu de ce README et vous l'approprier en y notant les éléments importants de votre projet. Il est très important de bien documenter un projet !
+### Installer Recharts
 
-Inspirez-vous des grands repos open sources qui existent sur github. Les informations qui reviennent souvent sont une description du projet (pourquoi, comment...), la maniere de lancer le projet et eventuellement d'y contribuer, une documentation sur des éléments que vous voulez mettre en avant et pour finir les noms des contributeurs.
+Installer la bibliothèque Recharts dans le dossier `frontend` pour pouvoir afficher le graphique.
+```sh
+npm install recharts
+```
+
+### Installer Axios
+
+Installer la bibliothèque Axios dans le dossier `frontend` pour pouvoir communiquer avec la base de données.
+```sh
+npm install axios
+```
+
+### Installer le Router DOM pour React
+
+Installer le Router DOM pour React dans le dossier `frontend` pour pouvoir avoir des liens fonctionnels permettant de changer de page.
+```sh
+npm install react-router-dom
+```
+
+### Lancer l'application front
+
+```sh
+npm start
+```
+
+
+## Si le fichier package.json est présent
+
+Vérifier que l'on est bien dans le dossier `frontend`.
+```sh
+cd frontend
+```
+
+Vérifier que toutes les dépendances sont bien présentes dans le fichier package.json
+```json
+"dependencies": {
+    "axios": "^0.24.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "3.2.0",
+    "recharts": "^2.1.6"
+  }
+```
+Si non, se référer à la [section précédente](#si-le-fichier-packagejson-nest-pas-présent), en fonction des dépendances manquantes (React / Recharts / Axios / React Router DOM).
+
+Lancer l'application front.
+```sh
+npm start
+```

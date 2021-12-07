@@ -34,7 +34,7 @@ export default class POTD extends React.Component {
             <div className="container-fluid p-0">
                 <h3 className="section-head-first row g-custom">Image du jour</h3>
                 <div className="row g-custom justify-content-center">
-                    <img className="col-4" id="potd-picture" src={this.state.url} alt="potd" height="600px"></img>
+                    <img className="col-4" id="potd-picture" src={this.state.url} alt="potd"></img>
                     <div className="col-7 potd-text">
                         <div className="potd-title">{this.state.title}</div>
                         <div className="potd-description">{this.state.explanation}</div>

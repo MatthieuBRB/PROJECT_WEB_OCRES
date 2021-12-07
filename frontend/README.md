@@ -66,3 +66,19 @@ Lancer l'application front.
 ```sh
 npm start
 ```
+
+
+# Storybook
+
+Un Storybook a été généré et permet de visualiser individuellement chaque composant React.
+Le dossier `src/stories` contient les Stories pour tous les composants. Un fichier équivaut à un composant.
+
+Pour lancer le Storybook localement depuis l'app, Vérifier que l'on est bien dans le dossier `frontend` et lancer l'application Storybook.
+```sh
+cd frontend
+npm run storybook
+```
+
+Une version statique a également été créée dans le dossier `storybook-static` permettant d'accéder au Storybook depuis n'importe où.
+Si l'on veut déplacer le Storybook (par exemple hors du projet en faisant une copie sur son bureau), il faut déplacer le dossier `storybook-static` dans son entiereté en ne supprimant aucun fichier à l'intérieur.
+Il suffit ensuite de lancer `storybook-static/index.html` pour démarrer le Storybook.
